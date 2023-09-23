@@ -7,6 +7,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  void userTapped() {
+    print('Tapped');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,9 +19,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.blue[100],
         body: Center(
           child: GestureDetector(
-            onTap: () {
-              print('Tapped');
-            },
+            onTap: userTapped,
             child: Container(
               width: 200,
               height: 200,
