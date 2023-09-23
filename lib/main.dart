@@ -16,19 +16,18 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: [
               //list of widgets
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.cyan[600],
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.cyan[400],
+              Expanded(
+                child: Container(
+                  color: Colors.cyan[600],
+                ),
               ),
               Expanded(
                 child: Container(
-                  width: 200,
+                  color: Colors.cyan[400],
+                ),
+              ),
+              Expanded(
+                child: Container(
                   color: Colors.cyan[200],
                 ),
               ),
