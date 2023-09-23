@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  List names = ["Judit", "István", "Balázs", "Bálint"];
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +16,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue[100],
         body: ListView.builder(
-          itemCount: 10,
+          itemCount: names.length,
           itemBuilder: (context, index) => ListTile(
-            title: Text(index.toString()),
+            title: Text(names[index]),
           ),
         ),
       ),
