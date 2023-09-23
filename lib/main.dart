@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             height: 300,
             width: 300,
             color: Colors.cyan[600],
-            padding: EdgeInsets.all(25),
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 50),
             child: Text("Bálint Csertán"),
           ),
         ),
