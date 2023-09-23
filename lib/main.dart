@@ -16,21 +16,17 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: [
               //list of widgets
-              Expanded(
-                child: Container(
-                  color: Colors.cyan[600],
-                ),
+              Container(
+                height: 350,
+                color: Colors.cyan[600],
               ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.cyan[400],
-                ),
+              Container(
+                height: 350,
+                color: Colors.cyan[400],
               ),
-              Expanded(
-                child: Container(
-                  color: Colors.cyan[200],
-                ),
+              Container(
+                height: 350,
+                color: Colors.cyan[200],
               ),
             ],
           )),
