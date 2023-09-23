@@ -13,25 +13,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue[100],
-        body: Row(
-          children: [
-            //list of widgets
-            Container(
-              width: 350,
-              height: 350,
-              color: Colors.cyan[600],
-            ),
-            Container(
-              width: 350,
-              height: 350,
-              color: Colors.cyan[400],
-            ),
-            Container(
-              width: 350,
-              height: 350,
-              color: Colors.cyan[200],
-            ),
-          ],
+        body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(index.toString()),
+          ),
         ),
       ),
     );
