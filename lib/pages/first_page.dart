@@ -1,8 +1,31 @@
+import 'package:basic_widgets/pages/home.dart';
+import 'package:basic_widgets/pages/profile.dart';
 import 'package:basic_widgets/pages/second_page.dart';
+import 'package:basic_widgets/pages/settings.dart';
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class FirstPage extends StatefulWidget {
+  FirstPage({super.key});
+
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  //this keeps track of the current page to display
+  int _selectedIndex = 0;
+
+  void _navigateBottomBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  final List _pages = [
+    Home(),
+    Profile(),
+    Settings(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +36,7 @@ class FirstPage extends StatelessWidget {
         elevation: 0,
         title: Center(child: Text('First Page')),
       ),
+      body: _pages[_selectedIndex],
       drawer: Drawer(
         backgroundColor: Colors.amber,
         child: Column(
@@ -44,6 +68,23 @@ class FirstPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: _navigateBottomBar,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
+          ]),
     );
   }
 }

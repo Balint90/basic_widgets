@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Profile extends StatelessWidget {
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,11 +9,11 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.cyan,
       // appBar: AppBar(
       //   backgroundColor: Colors.cyan[700],
-      //   title: Center(child: Text('Home')),
+      //   title: Center(child: Text('Profile Page')),
       // ),
       body: Center(
         child: Text(
-          "Home",
+          "Profile",
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,
