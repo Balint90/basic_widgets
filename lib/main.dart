@@ -17,8 +17,10 @@ class MyApp extends StatelessWidget {
           child: Container(
             height: 300,
             width: 300,
-            color: Colors.cyan[600],
-            padding: EdgeInsets.only(left: 25, top: 25),
+            decoration: BoxDecoration(
+                color: Colors.cyan[600],
+                borderRadius: BorderRadius.circular(25)),
+            padding: EdgeInsets.all(25),
             child: Text("Bálint Csertán"),
           ),
         ),
