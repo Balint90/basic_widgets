@@ -21,7 +21,14 @@ class MyApp extends StatelessWidget {
                 color: Colors.cyan[600],
                 borderRadius: BorderRadius.circular(25)),
             padding: EdgeInsets.all(25),
-            child: Text("Bálint Csertán"),
+            child: Text(
+              "Bálint Csertán",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
       ),
