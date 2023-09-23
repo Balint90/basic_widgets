@@ -14,12 +14,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
           backgroundColor: Colors.blue[100],
           body: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               //list of widgets
               Container(
-                width: 300,
-                height: 300,
+                width: 200,
+                height: 200,
                 color: Colors.cyan[600],
               ),
               Container(
@@ -27,10 +26,11 @@ class MyApp extends StatelessWidget {
                 height: 200,
                 color: Colors.cyan[400],
               ),
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.cyan[200],
+              Expanded(
+                child: Container(
+                  width: 200,
+                  color: Colors.cyan[200],
+                ),
               ),
             ],
           )),
