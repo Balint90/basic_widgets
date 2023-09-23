@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
           backgroundColor: Colors.blue[100],
           body: ListView(
-            scrollDirection: Axis.horizontal,
+            scrollDirection: Axis.vertical,
             children: [
               //list of widgets
               Container(
