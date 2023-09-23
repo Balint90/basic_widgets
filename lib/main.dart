@@ -12,28 +12,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.blue[100],
-          body: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              //list of widgets
-              Container(
-                width: 350,
-                height: 350,
-                color: Colors.cyan[600],
-              ),
-              Container(
-                width: 350,
-                height: 350,
-                color: Colors.cyan[400],
-              ),
-              Container(
-                width: 350,
-                height: 350,
-                color: Colors.cyan[200],
-              ),
-            ],
-          )),
+        backgroundColor: Colors.blue[100],
+        body: Row(
+          children: [
+            //list of widgets
+            Container(
+              width: 350,
+              height: 350,
+              color: Colors.cyan[600],
+            ),
+            Container(
+              width: 350,
+              height: 350,
+              color: Colors.cyan[400],
+            ),
+            Container(
+              width: 350,
+              height: 350,
+              color: Colors.cyan[200],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
