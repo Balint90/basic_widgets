@@ -12,27 +12,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.blue[100],
-          body: Stack(
-            alignment: Alignment.bottomRight,
-            children: [
-              Container(
-                width: 300,
-                height: 300,
-                color: Colors.cyan,
+        backgroundColor: Colors.blue[100],
+        body: Center(
+          child: GestureDetector(
+            onTap: () {
+              print('Tapped');
+            },
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.cyan,
+              child: Center(
+                child: Text(
+                  "Tap Me!",
+                  style: TextStyle(
+                    color: Colors.amber,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.cyan[600],
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.cyan[800],
-              ),
-            ],
-          )),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
